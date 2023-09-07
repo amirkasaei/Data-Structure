@@ -1,0 +1,13 @@
+BSTSearch(BST t, target):
+    ift is null:
+        return null
+    
+    if target == t.data:
+        return t
+
+    if target < t.data:
+        return BSTSearch(t.left, target)
+
+    return BSTSearch(t.right, target)
+
+    O(lg n)

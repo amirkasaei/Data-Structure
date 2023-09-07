@@ -1,0 +1,28 @@
+inFixToPostFix(inFixEXP):
+s1, s2 = stack()
+
+for any token in inFixEXP:
+    if isOprand(x):
+        s1.push(x)
+    
+    else:
+        y = s2.top
+        if y os null:
+            s2.push(x)
+
+        elif priority(x) > priority(y):
+            s2.push(x)
+            
+        else:
+            if y is binary:
+                operator = s2.pop()
+                opr2 = s1.pop()
+                opr1 = s1.pop()
+                s1.push("opr1 opr2 operator")
+            else:
+                operator = s2.pop()
+                opr1 = s1.pop()
+                s1.push("opr1 operator")
+
+
+return s1.pop()

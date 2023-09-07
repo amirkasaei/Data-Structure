@@ -1,0 +1,20 @@
+BST-Min(BST t):
+    if t is null:
+        return null
+    if t.left is null;
+        return t
+
+    BST-Min(t.left)
+
+
+# none recursive
+BST-Min(Tree t):
+    if t is null:
+        return null
+        
+    tmp = t
+
+    while tmp.left is not null:
+        tmp = tmp.left
+
+    return tmp

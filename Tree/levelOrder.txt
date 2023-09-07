@@ -1,0 +1,8 @@
+levelOrder(Tree t):
+    q.empty()
+    q.enqueue(t)
+
+    while(q is not empty):
+        v = q.dequeue()
+        print(v)
+        q.enqueueAll(v.child)

@@ -1,0 +1,7 @@
+inOrder(binaryTree t):
+    if t is null:
+        return
+    
+    inOrder(t.left)
+    print(t.data)
+    inOrder(t.right)

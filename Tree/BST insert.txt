@@ -1,0 +1,18 @@
+insertBST(value, BST t, BST parent):
+    if t is null:
+        tmp = BST(value)
+
+        if parent is null:
+            if value <= parent.data:
+                parent.left = tmp
+
+            else:
+            parent.right = tmp
+
+    return
+
+    if value <= t.data:
+        insertBST(value, t.left, t)
+
+    else:
+    insertBST(value, t.right, t)

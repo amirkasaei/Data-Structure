@@ -1,0 +1,23 @@
+postFixToPreFix(postFixEXP):
+
+    Stack s
+
+    for any token x in postFixEXP:
+
+        if isOprand(x):
+            s.push(x)
+        
+        else if isSingleOperator(x):
+            y = s.pop()
+            k = x  y
+            s.push(k)
+
+        else:
+            z = s.pop()
+            y = s.pop()
+            k = x y z
+            s.push(k)
+        
+
+    return s.pop()
+            

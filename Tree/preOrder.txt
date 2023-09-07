@@ -1,0 +1,7 @@
+preOrder(binaryTree t):
+    if t is null:
+        return
+    
+    print(t.data)
+    preOrder(t.left)
+    preOrder(t.right)

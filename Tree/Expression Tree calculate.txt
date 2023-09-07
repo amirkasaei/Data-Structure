@@ -1,0 +1,11 @@
+calculateExpTree(Tree t):
+    if isOprand(t.data):
+  return t.data
+
+  case t.data:
+    '+':
+        return calculateExpTree(t.left) + calculateExpTree(t.right)      
+    '-':
+        return calculateExpTree(t.left) + calculateExpTree(t.right)      
+    '-1':
+    return - calculateExpTree(t.right)      

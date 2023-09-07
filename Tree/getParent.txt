@@ -1,0 +1,13 @@
+getParent(binaryTree t, binaryTree v):
+   if t is null:
+    return null
+
+    if t.left == v or t.right == v:
+        return t
+    
+    tmp =getParent(t.left, v)
+
+    if tmp is not null:
+        retrun tmp
+
+    return getParent(t.right, v)

@@ -1,0 +1,28 @@
+preFixToInFix(preFixEXP):
+    Stack s
+    Queue q
+
+    for any token x in preFixEXP:
+        if isOprand(x) or isSingleOperator(x):
+            y = s.pop()
+            if y is null:
+                s.push(x)
+
+            else:
+                z = q.Dequeue()
+                if z is null:
+                    k = y x
+
+                else if isSingleOperator(y):
+                    k = y x z
+
+                else:
+                    k = y z x
+            
+                s.push(k)
+
+        else if isBinaryOperator(x):
+            q.Enqueue(x)
+
+
+    retrun s.pop()

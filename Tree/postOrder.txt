@@ -1,0 +1,7 @@
+postOrder(binaryTree t):
+    if t is null:
+        return
+    
+    postOrder(t.left)
+    postOrder(t.right)
+    print(t.data)

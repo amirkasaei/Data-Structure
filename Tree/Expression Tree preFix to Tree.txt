@@ -1,0 +1,22 @@
+index = 0
+
+Tree preToTree(preFix):
+    tmp = Tree()
+    if isOprand(preFix.getToken(index)):
+        tmp.data = preFix.getToken(index)
+        index++
+        return tmp
+
+    if isBinaryOperator(preFix.getToken(index)):
+        tmp.data = preFix.getToken(index)
+        index++
+        tmp.left = preToTree(preFix)
+        tmp.right = preToTree(preFix)
+        retrun tmp
+
+    tmp.data = preFix.getToken(index)
+    index++
+    tmp.right = preFixToTree(prefix)
+    return tmp
+
+

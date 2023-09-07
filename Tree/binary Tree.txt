@@ -1,0 +1,7 @@
+class node:
+    data
+    left = node()
+    right = node()
+
+class binaryTree:
+    root = node()

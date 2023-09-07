@@ -1,0 +1,23 @@
+BST-Successor(BST t):
+
+    if t is null:
+        return null
+
+    if t.right is not null:
+        return BST-Min(t.right)
+        // BST-Min has been defined in class
+    
+    else:
+        if t.parent is null:
+            return null
+
+        else:
+            if t.parent.left is equal t:
+                return t.parent
+
+            else if t.parent.right is equal t:
+                t = t.parent
+                t.right = null
+                return BST-Successor(t)
+
+

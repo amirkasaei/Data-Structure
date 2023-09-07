@@ -1,0 +1,19 @@
+BST-Delete(BST t, int value):
+    if t is null:
+        return null
+
+    target = BST-Search(t, value)
+    
+    //BST-Search & BST-Min has been defined in class
+
+    tmp = BST-Min(target.right)
+
+    target.data = tmp.data
+
+    if tmp.right is null:
+        tmp = null
+
+    else:
+        tmp = tmp.right   
+
+    return t

@@ -1,0 +1,5 @@
+getHeight(binaryTree):
+    if t is null:
+        return -1
+
+    return 1 + max(getHeight(t.left), getHeight(t.right))
