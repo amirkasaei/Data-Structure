@@ -1,0 +1,8 @@
+class node:
+    data
+    children = [node]
+
+
+class Tree:
+    root = node()
+
