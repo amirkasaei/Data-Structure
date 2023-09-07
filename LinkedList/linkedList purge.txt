@@ -1,0 +1,32 @@
+linkedList purge(linkedList l):# removes duplicate data
+    i, j = linkedList()
+    i = l
+
+    while i.next is not null:
+        j = i.next
+        while j.next is not null:
+            if i.data == j.data:
+                delete(j)
+            else:
+                j = j.next
+
+        i = i.next
+
+    return l 
+
+    O(n^2)
+
+
+
+linkedList purge(linkedList l):
+    meregSort(l)
+    tmp = l 
+    while tmp.next is not null:
+        while tmp == tmp.next:
+            delete(tmp.next)
+
+        tmp = tmp.next
+
+    return l 
+
+    O(nlgn)

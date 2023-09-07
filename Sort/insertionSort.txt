@@ -1,0 +1,10 @@
+InsertionSort (array) :
+	For i in rage (2, len(array) ) :
+		Key = array[i]
+        j = i - 1
+        while(j > 0 and array[i] > key):
+            swap(array[j], array[j + 1])
+            j--
+
+
+# O(n^2)

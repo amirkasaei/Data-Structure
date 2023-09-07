@@ -1,0 +1,20 @@
+getList(input):
+
+    l = new List
+    t = l
+
+    if data is null:
+        return null
+    
+    while input.data is not ")":
+
+        if input.data is "(":
+            t.next.down = getList(input.next)
+
+        else if input.data is not ",":
+            t.next.data = input.data
+
+        input = input.next
+        t = t.next
+
+    return l

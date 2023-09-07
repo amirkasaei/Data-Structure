@@ -1,0 +1,9 @@
+next(int k):
+    return (k+1)%max
+
+
+isEmpty(q):
+    return next(q.tail) == q.head
+
+isFull(q):
+    return next(next(q.tail)) == q.head

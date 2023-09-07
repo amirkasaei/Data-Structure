@@ -1,0 +1,12 @@
+linkedList reverse(linkedList l):
+    if l is null:
+        return null
+
+    if l.next is null:
+        return l
+    
+    tmp = reverse(l.next)
+    l.next.next = l
+    l.next = null
+
+    return tmp

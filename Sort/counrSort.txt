@@ -1,0 +1,17 @@
+countSort(A, n, m):
+    C = [0]*m
+    B = []*n
+
+    for i in range(n):
+        C[A[i]]++
+
+    for i in range(1,m):
+        C[i] = C[i] + c[i-1]
+        
+    for i in range(n-1, 0, -1):
+        B[c[A[i]]-1] = A[i]
+        C[A[i]]--
+    
+    return B
+
+O(n), stable

@@ -1,0 +1,9 @@
+LinkedList copy(LinkedList l):
+    if  l is null:
+        return null
+
+    tmp = LinkedList()
+    tmp.data = l.data
+    tmp.next = copy(l.next)
+
+    return tmp

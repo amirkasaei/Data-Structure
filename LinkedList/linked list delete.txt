@@ -1,0 +1,17 @@
+LinkedList delete(LinkedList l, data):
+    if l is null:
+        return l
+
+    if l.data = data:
+        return l.next
+    
+    LinkedList tmp = l
+    while tmp.next is not null:
+        if tmp.next.data == data:
+            tmp.next = tmp.next.next
+
+        tmp = tmp.next
+
+        return 
+        
+    O(n)

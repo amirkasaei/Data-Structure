@@ -1,0 +1,16 @@
+enqueue(data):
+    if isFull():
+        return -1
+    
+    q.tail = next(q.tail)
+    q[q.tail] = data
+
+
+
+dequeue():
+    if isEmpty():
+        return "ERROR"
+
+    tmp = q[q.head]
+    q.tail = next(q.tail)
+    return tmp

@@ -1,0 +1,16 @@
+Linkedlist insertLast(Linkedlist l, int newData):
+    Linkedlist temp = new Linkedlist
+    temp.data = newData
+
+    temp2 = l
+    while temp2.next != null:
+        temp2 = temp2.next
+
+    temp.next = temp
+    return l
+
+Linkedlist insertFirst(Linkedlist l, int newData):
+    tmp = LinkedList()
+    tmp.data = newData
+    tmp.next = l
+    return temp

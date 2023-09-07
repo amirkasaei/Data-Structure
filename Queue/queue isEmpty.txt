@@ -1,0 +1,5 @@
+boolean is Empty(queue q)
+ if q.head == q.tail + 1:
+    return True
+
+return False

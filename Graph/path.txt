@@ -1,0 +1,7 @@
+path(node):
+    if node == s:
+        print(s)
+        return
+
+    path(father(node))
+    print(node)

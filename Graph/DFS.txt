@@ -1,0 +1,33 @@
+DFS(Graph g):
+    ss = Stack()
+    ss.empty()
+
+    for v in g:
+        visited[v] = False
+
+    ss.push(source(g)) # source is the start point of search
+    visited[source(g)] = True
+
+    while not ss.isEmpty():
+        # finish time
+        u = ss.pop()
+        visited[u] = True
+
+        for v in adjacent(u):
+            if not visited[v]:
+                # discovery time
+                ss.push(v)
+                father[v] = u
+                visited[v] = True
+        
+
+
+
+DFS(Graph g):
+    visited[s] = True
+    # discovery time(s)
+    for v in adjacent(s):
+        if not visited[v]:
+            father[v] = s
+            DFS(v)
+    # finish time(s)

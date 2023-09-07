@@ -1,0 +1,7 @@
+enqueue(q, data)
+    q.tail = q.tail + 1
+    q[r] = data
+
+
+dequeue(q):
+    retrurn q[head++]

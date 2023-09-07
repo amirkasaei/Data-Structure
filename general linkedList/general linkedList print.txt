@@ -1,0 +1,22 @@
+printList(GList l):
+    print("(")
+
+    if l is null:
+    print(")")
+    return
+
+    l = l.next
+
+    while l is not null:
+         if l.down is null:
+            if l.down.next is null:
+                print(l.data)
+            else:
+                print(l.data + ",")
+
+        else:
+            printList(l.down)
+
+        l = l.next
+
+    print(")")

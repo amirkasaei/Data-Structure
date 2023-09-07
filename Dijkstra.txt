@@ -1,0 +1,17 @@
+Dijkstra(Graph s):
+    solved = [s]
+
+    while solves != v: # O(V)
+        (i,j) = min{w(u,v)| u in solved and v not in solved} # O(V * E)
+
+        d[j] = w[i, j]
+
+        solved = solved union {j}
+
+        for any k | (j,k) in E and k not in solved: # O(E)
+            w[j,k] = w[i,j] + w[j,k]
+
+
+    return d
+
+    O(EV+ E) = O(EV) = O(V^3)

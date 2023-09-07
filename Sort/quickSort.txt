@@ -1,0 +1,29 @@
+partition(A, begin, end):
+    x = A[b]
+    i = begin
+    j = end
+
+    while i < j:
+        while A[i] <= x and i < j:
+            i++
+        
+        while A[j] >= x and i < j:
+            j--
+        
+        if i < j:
+            swap(A[i], A[j])
+
+    swap(A[b], A[i-1])
+    return i-1
+
+O(n)
+
+quickSort(A, begin, end):
+    if begin >= end:
+        return
+
+    r = partition(A, b, e)
+    quickSort(A, b, r - 1)
+    quickSort(A, r + 1, end)
+    
+O(nlogn) ~ O(n^2)

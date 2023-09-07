@@ -1,0 +1,22 @@
+BFS(Graph g):
+    q = Queue()
+    q.empty()
+
+    for v in g:
+        visited[v] = False
+
+    q.enqueue(source(g)) # source is the start point of search
+    visited[source(g)] = True
+
+    while not q.isEmpty():
+        # finish time
+        u = q.dequeue()
+        visited[u] = True
+
+        for v in adjacent(u):
+            if not visited[v]:
+                # discovery time
+                q.enqueue(v)
+                father[v] = u
+                visited[v] = True
+        

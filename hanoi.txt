@@ -1,0 +1,12 @@
+hanoiTower(n, start, goal, help):
+    if n==1:
+        print(start + "-->" + goal)
+        return
+    
+    hanoiTower(n-1, start, help, goal)
+    print(start + "-->" + goal)
+    hanoiTower(n-1, help, start, goal)
+
+
+
+    # O(2^n)

@@ -1,0 +1,18 @@
+iSelect(A, begin, end, i):
+    if p = q:
+        return A[p]
+
+    r = partition(A,b,e)
+    if r==i:
+        return A[p]
+
+    if r < i:
+        return iSelect(A, r + 1, end, i - r)
+
+    if r > i:
+        return iSelect(A, b, r - 1, i)
+
+O(n)
+
+
+median = n/2select

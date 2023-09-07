@@ -1,0 +1,34 @@
+mergeSort(array, begin, end):
+    if begin > end:
+        return null
+    mid = (begin + end)/2
+
+    mergeSort(array, begin, mid)
+
+    mergeSort(array, mid, end)
+
+    merge(array, begin, end)
+
+
+
+merge(array, begin, end):
+    tmp = []
+    i = begin
+    mid = (begin + end)/2
+    j = mid + 1
+    k = 0
+
+    while(i < mid and j < end):
+        if array[i] <= array[j]:
+            tmp[k++] = array[i++]
+
+        else:
+            tmp[k++] = array[j++]
+
+    while(j <= end):
+        tmp[k++] = array[j++]
+    
+    while(i <= mid):
+        tmp[k++] = array[i++]
+
+    array = tmp

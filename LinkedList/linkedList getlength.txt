@@ -1,0 +1,14 @@
+def getLength(LinkedList l):
+    length =  0
+    while l is not null:
+        l = l.next
+        length++
+
+    return length
+
+
+
+def getLength(LinkedList l):
+    if l is null:
+        return 0
+    return 1 + getLength(l.next)
